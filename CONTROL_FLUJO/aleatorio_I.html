@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Do-While</title>
+    <style>
+        h1{            font-size: 1.9em;
+            color: blue;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;        }
+    </style>
+    <script>
+        var aleatorio=Math.round(Math.random()*100);
+        //alert( aleatorio);
+        var minum, intentos;
+        minum =0;
+        intentos =0;
+    
+    do{
+        minum = prompt("Introduce un Numero entre 0 y 100");
+
+            if(aleatorio>minum){
+                alert("Mas alto");
+
+            }
+            if(aleatorio<minum){
+                alert("Mas bao");
+            }
+
+    }while(aleatorio!=minum);
+    alert("Correcto");
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <head>
+        <h1>Generar un Numero Aleatorio</h1>
+    </head>
+    
+</body>
+</html>
