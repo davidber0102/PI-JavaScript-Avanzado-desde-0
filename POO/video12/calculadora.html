@@ -7,19 +7,33 @@
     <script>
         var num1=prompt("Introduce el Primer Numero: ");
         var num2=prompt("Introduce el Segundo Numero: ");
+
         alert(typeof(num1));
-        var operacion=prompt("¿Que operacion deseas realizar?  suma/resta/multiplicacion/division");
+        if(!isNaN(num1) && !isNaN(num2)){
 
-        if(operacion=="suma"){
-            alert(parseInt(num1)+parseInt(num2));
-        }else if(operacion=="resta"){
-            alert(parseInt(num1)-parseInt(num2));
-        } else if(operacion=="multiplicacion"){
-            alert(parseInt(num1)*parseInt(num2));
-        } else if(operacion=="division"){
-            alert(parseInt(num1)/parseInt(num2));
+        
+                var operacion=prompt("¿Que operacion deseas realizar?  suma/resta/multiplicacion/division");
+ 
+                if(operacion=="suma"){
+                    alert(parseInt(num1)+parseInt(num2));
+                    }else if(operacion=="resta"){
+                        alert(parseInt(num1)-parseInt(num2));
+                    } else if(operacion=="multiplicacion"   || operacion=="multiplicación"){
+                        alert(parseInt(num1)*parseInt(num2));
+                    } else if(operacion=="division" || operacion=="división"){
+                        alert(parseInt(num1)/parseInt(num2));
+                    }else{
+                        alert("Operacion no contemplada!!!");
+                    }
+        }else {
+            alert("Los numeros introducidos son incorrectos");
+            if(typeof(num1)=="string" || typeof(num2)=="string"){
+                alert("Datos invalidos");
+            }else{
+                alert("Error no Identificado");
+            }
 
-
+        }
 
 
     </script>

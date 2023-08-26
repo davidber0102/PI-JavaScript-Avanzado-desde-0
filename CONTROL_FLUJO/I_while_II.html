@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio While II</title>
+    <style>
+        #contenedor{            width: 25%;
+            background-color: #ffc;
+            margin: auto;
+            padding: 15px;        }
+
+        h1{            font-size: 25px;
+            color: rgb(24, 51, 186);
+            text-align: center;        }
+    </style>
+
+    <script>
+        var nombre, edad, poblacion;
+        nombre = prompt("Introduce tu nombre por favor", "Escribe tu nombre, aqui");
+            while (!isNaN(nombre)){
+                alert("Valor invalido");
+                nombre=prompt("Introduce el dato de nombre correctamente:", "Escribe tu nombre, aqui");
+            }
+        edad = prompt("Introduce tu edad por favor", "Escribe tu edad, aqui");
+            while(edad<=0 || edad>105 || isNaN(edad)){
+                edad = prompt("Introduce correctamente tu edad", "Escribe tu edad, aqui");
+            }
+        poblacion = prompt("Introduce tu poblacion por favor", "Escribe tu poblacion, aqui");
+        while (!isNaN(poblacion)){
+            alert("Valor invalido");
+            poblacion=prompt("Introduce el dato de poblacion correctamente:", "Escribe tu poblacion, aqui");
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <head>
+        <h1>Ciclo While</h1>
+    </head>
+
+<div id="contenedor">
+    <p>Nombre: <script>document.write(nombre);</script></p>
+    <p>Edad: <script>document.write(edad);</script></p>
+    <p>Poblacion: <script>document.write(poblacion);</script></p>
+</div>
+
+</body>
+</html>
