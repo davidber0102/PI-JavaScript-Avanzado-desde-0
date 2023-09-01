@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Bucle For II</title>
+    <style>
+        h1{            font-size: 1.8em;
+            color: brown;
+            text-align: center;
+            border-bottom: 3px solid black;        }
+    </style>
+
+
+</head>
+<body>
+    <head>
+        <h1>Ejercicio Bucle For II</h1>
+    </head>
+    <script>
+        var trabajadores=new Array();
+        var persona="";
+        var contador =0;
+    
+    while(persona!="salir"){
+        persona=prompto("Introduce trabajador");
+        trabajadores[contador]=persona;
+        contador++;
+    }
+    trabajadores.pop();
+
+    for(var i=0;i<trabajadores.length;i++){
+        document.write(trabajadores[i] + "<br*>");
+    }
+    </script>
+</body>
+</html>

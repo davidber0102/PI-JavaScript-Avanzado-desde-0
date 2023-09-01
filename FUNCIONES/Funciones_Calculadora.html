@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones III</title>
+    <style type="text/css">
+        h1{        font-size: 2.1em;
+            text-align: center;
+            font-weight: bold;
+            border: 3px solid black;    }
+        p{        font-size: 1.7em;
+            color: brown;    
+        font-style: italic;}            
+        </style>
+        <script>
+            var reoetir="si";
+     
+            function suma(num1,num2) {alert("La suma es: " + (num1 + num2));}
+            function resta(num1,num2) {alert("La resta es: " + (num1 - num2));}
+            function multiplicacion(num1,num2) {alert("La multiplicacion es: " + (num1 * num2));}
+            function division(num1,num2) {alert("La division es: " + (num1 / num2));}
+    
+     do{
+            var operacion=prompt("¿Que operacion deseas realizar?");
+            var operador1=parseInt(prompt("Introduce el primer Numero: "));
+            var operador2=parseInt(prompt("Introduce el siguiente Numero: "));
+
+            if(operacion=="sumar"){
+                suma(operador1,operador2);
+            }else if(operacion=="restar"){
+                restar(operador1,operador2);
+            }else if(operacion=="multiplicar"){
+                multiplicacion(operador1,operador2);
+            }else if(operacion=="dividir"){
+                division(operador1,operador2);
+            }else{
+                alert("Operacion no contemplada");
+            }
+            reoetir=prompt("¿Deseas Repetir?");
+        }while(reoetir=="si");
+
+
+
+        </script>
+</head>
+<body>
+    <head>
+        <h1>Ejercicio Funciones III: Calculadora Arcaica</h1>
+    </head>
+
+    </body>
+</html>

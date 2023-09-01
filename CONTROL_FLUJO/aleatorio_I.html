@@ -10,39 +10,56 @@
             font-weight: bold;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;        }
-    </style>
-    <script>
+    </style>   
+</head>
+
+<body>
+    <head>        <h1>Generar un Numero Aleatorio</h1>    </head>
+
+    <table width="25%" border="0">
+        <tr>
+            <td><label for="texfield"></label>           
+            <input type="text" name="texfield" id="c_mensaje"> </td>
+
+            <td><label for="texfield2"></label>           
+                <input type="text" name="texfield2" id="c_intentos"> </td>
+        </tr>
+    </table>
+
+<script>
         var aleatorio=Math.round(Math.random()*100);
-        //alert( aleatorio);
         var minum, intentos;
-        minum =0;
-        intentos =0;
+        minum=0;
+        intentos=0;
+
+        var mensaje=document.getElementById("c_mensaje");
+        var intentos_consumidos=document.getElementById("c_intentos");
     
     do{
-        minum = prompt("Introduce un Numero entre 0 y 100");
+        minum=prompt("Introduce un Numero entre 0 y 100");
 
             if(aleatorio>minum){
-                alert("Mas alto");
-
+                mensaje.value="Mas alto";
+                mensaje.style.fontSize="18px";
+               // document.write("Mas alto"+"<br/>");           
             }
+
             if(aleatorio<minum){
-                alert("Mas bao");
+                mensaje.value="Mas bajo";
+                mensaje.style.fontSize="18px";
+                //document.write("Mas bajo"+"<br/>");
             }
-
+            intentos++;
+            intentos_consumidos.value=intentos;
+            intentos_consumidos.style.fontSize="18px";
+            intentos_consumidos.style.color="red";
+            intentos_consumidos.style.textAlign="center";
     }while(aleatorio!=minum);
-    alert("Correcto");
+    mensaje.value="Correcto!";
+    mensaje.style.fontSize="20px";
+    mensaje.style.color="red";
+    //document.write("Correcto. Has consumido " + intentos + "intentos");
+</script>
 
-
-
-
-
-
-    </script>
-</head>
-<body>
-    <head>
-        <h1>Generar un Numero Aleatorio</h1>
-    </head>
-    
 </body>
 </html>
