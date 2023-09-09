@@ -31,15 +31,58 @@
   </style>
 <script>
 var cifra="";
+var acumulado=0;
+var p_operacion=true;
+var sumar=false;
+var restar=false;
+
   function display_numeros(numero){
-    document.getElementById("display").value=numero;
-    document.getElementById("display").value;
+    document.getElementById("display").value=cifra+numero;
+    cifra=document.getElementById("display").value;
   }
 
+  function suma(){
+    if(restar){
+      acumulado=acumulado-parseInt(cifra);
+      document.getElementById("display").value=acumulado;
+    }else{
+    acumulado=acumulado+parseInt(cifra);
+    document.getElementById("display").value=acumulado;
+    }
+    cifra="";
+    sumar=true;
+    restar=false;
+    p_operacion=false;
+  }
 
+  function resta(){
+    if(p_operacion==false){
+       if (sumar){
+          acumulado=acumulado+parseInt(cifra);
+          document.getElementById("display").value=acumulado;
+        }else{
+            acumulado=acumulado-parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }
+    }else{
+      acumulado=parseInt(cifra);
+      p_operacion=false;
+    }
 
+    cifra="";
+    sumar=false;
+    restar=true;
+  }
 
-
+  function resultado(){
+    if(sumar){
+      document.getElementById("display").value=acumulado + parseInt(cifra);
+    } else if(restar){
+      document.getElementById("display").value=acumulado - parseInt(cifra);
+    }
+    acumulado=parseInt(document.getElementById("display").value);
+    cifra=0;
+  }
 </script>
 
 
@@ -55,8 +98,8 @@ var cifra="";
     <input name="display" type="text" class="color_display" id="display" size="25"></td>
   </tr>
   <tr>
-    <td width="26%"><input name="button" type="button" class="numero" id="button" value="+" ></td>
-    <td width="21%"><input name="button2" type="button" class="numero" id="button2" value="-"></td>
+    <td width="26%"><input name="button" type="button" class="numero" id="button" value="+"  onclick="suma()"></td>
+    <td width="21%"><input name="button2" type="button" class="numero" id="button2" value="-" onclick="resta()"></td>
     <td width="21%"><input name="button3" type="button" class="numero" id="button3" value="*" ></td>
     <td width="32%"><input name="button4" type="button" class="numero" id="button4" value="/" ></td>
   </tr>
@@ -80,10 +123,14 @@ var cifra="";
   </tr>
   <tr>
     <td><input name="num0" type="button" class="numero" id="num0" value="0" onClick="display_numeros(0)"></td>
-    <td><input name="button17" type="button" class="numero" id="button17" value=","></td>
-    <td colspan="2"><input name="button12" type="button" class="igual" id="button12" value="=" ></td>
+    <td><input name="button17" type="button" class="numero" id="button17" value="," ></td>
+    <td colspan="2"><input name="button12" type="button" class="igual" id="button12" value="=" onclick="resultado ()"></td>
   </tr>
 </table>
+
+<script>
+  document.getElementById("display").value=0;
+</script>
 
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQuery Pildoras</title>
+  <style>  
+    h1{        font-size: 2.1em;
+      text-align: center;
+      font-weight: bold;
+      border: 3px solid black;    }
+
+  p{        font-size: 1.7em;
+      color: brown;    
+  font-style: italic;}
+
+  #carrete{    border: 2px solid black;  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#carrete img").hide();
+    });
+  </script>
+
+
+</head>
+<body>
+  <head>
+    <h1>Ejercicio Librerias Jquery</h1>
+</head>
+<p>Hola bienvenido a mi pagina Web</p>
+<div id="carrete">
+<img src="img/arbol.jpg" alt="" width="250" height="175">
+&nbsp;
+<img src="img/atardecer.jpg" alt="" width="250" height="175">
+&nbsp;
+<img src="img/sol.jpg" alt="" width="250" height="175">
+</div>
+
+<!--
+<script>
+  var imagenes=document.querySelectorAll("#carrete img");
+
+    for(var i=0; i<imagenes.length; i++){
+      imagenes[i].style.visibility="hidden";
+    }
+</script>
+-->
+</body>
+</html>

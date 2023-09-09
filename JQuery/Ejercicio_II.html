@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio II JQuery</title>
+    <style>
+        head, h1{        font-size: 2.1em;
+            text-align: center;
+            font-weight: bold;
+            border: 3px solid black;    }
+        .micontenedor{
+            background-color: brown;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //alert($("#errores h2").html());
+            $("#errores").append("<p> Hay errorres en el formulario </p>");
+
+        });
+        function validar(){
+            var n_usuarios=document.getElementById("usuarios").value;
+            if (n_usuarios==""){
+                $("#usuarios").after("Rellena este campo, por favor");
+            }
+        }
+    </script>
+</head>
+<body>
+    <head>
+        <h1>Ejercicio Agregando Conternido: JQuery</h1>
+    </head>
+    <div id="contenedor">
+        <div id="errores" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+    <form action="" method="get">
+        <input type="text" name="" id="usuario"> <br>
+        <input type="text" name="" id="nombre"> <br>
+        <input type="text" name="" id="apellido"> <br>
+        <input type="button" value="Enviar" onclick="validar()">
+    </form>
+</body>
+</html>

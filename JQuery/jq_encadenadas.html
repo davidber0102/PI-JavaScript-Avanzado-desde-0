@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQuery Pildoras</title>
+  <style>  
+    h1{        font-size: 2.1em;
+      text-align: center;
+      font-weight: bold;
+      border: 3px solid black;    }
+
+  p{        font-size: 1.7em;
+      color: brown;    
+  font-style: italic;}
+  #anuncio{    background-color: black;
+    color: aliceblue;
+    font-size: 25px;
+    text-align: center;  }
+      </style>
+
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $("#anuncio").width(500)
+            .height(500)
+            .text(" ¡ ¡ ¡ V E N D E ! ! !")
+            .hide()
+            .fadeIn(10000);
+          });
+      </script>
+ 
+</head>
+<body>
+  <head>
+    <h1>Ejercicio Librerias Jquery</h1>
+</head>
+<p>Hola bienvenido a mi pagina Web</p>
+<br>
+<div id="anuncio">
+    ¡¡COMPARA!!
+</div>
+
+<!-- 
+<script>
+    var anuncio = document.getElementById("anuncio");
+    anuncio.style.width="500px"
+    anuncio.style.height="500px";
+    anuncio.innerHTML = " ¡ ¡ ¡ V E N D E ! ! !";
+</script>
+-->
+
+
+</body>
+</html>
