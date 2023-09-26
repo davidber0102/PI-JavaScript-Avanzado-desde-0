@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery & HTML</title>
+    <style>
+        h1{font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #000;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+            document.getElementById("img1").addEventListener("mouseout", restaurar, false);
+        });
+
+        function cambiar() {
+            $("#img1").attr("src", "img/sol.jpg");
+        }
+
+        function restaurar(){
+            $("#img1").attr("src", "img/arbol.jpg");
+        }
+
+    </script>
+</head>
+<body>
+    <head>
+        <h1>Ejercicio JQuery: Leyendo y Modificando atributos HTML I</h1>
+    </head>
+
+    <img src="img/arbol.jpg" alt="" id="img1">
+    
+</body>
+</html>

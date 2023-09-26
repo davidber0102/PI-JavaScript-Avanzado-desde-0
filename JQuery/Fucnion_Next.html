@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery</title>
+    <style>
+        h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #aad6e9; color: aqua;}
+        body {background-color: blue; color: #fff;}
+        h3{background: url(img/abrir.png) no-repeat 0 11px;padding: 10px 0 0 25px; cursor: pointer;}
+        h3.cerrar{background-image: url(img/cerrar2.png);}
+        .respuesta{margin-left: 25px;}
+        .titulo{text-align: center;}
+        .principal{margin-left: 200px; margin-top: 100px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".respuesta").hide();
+            $(".principal h3").click(function(){
+                $(this).toggleClass("cerrar").next(".respuesta").fadeToggle("fast");
+                /*
+                $(this).next(".respuesta").fadeToggle(1000);
+                $(this).toggleClass("cerrar");*/
+                });
+        });
+    </script>
+</head>
+<body>
+    <head>
+        <h1>Ejercicio JQuery: Evento Next</h1>
+    </head>
+    <h1 class="titulo">Pildoras Informaticas FAQ</h1>
+
+    <div class="principal">
+
+        <h2>Preguntas Frecuentes</h2>
+
+        <h3>¿Que progrma utiliza para grabar videos?</h3>
+        <div class="respuesta">
+            <p>Uyilizo Camtasia version 7 junto con el progrma gratuito ZoomIt</p>
+        </div>
+
+        <h3>¿Puedes pasarme la pagina donde te has descargado Dreamweaver? a mi  me pide codigo</h3>
+        <div class="respuesta">
+            <p>Todo software utilizado por pildoras informaticas es 100% legal. Desconozco si exiten paginas
+                a tal efevto y si as conociera, tampoco podria divulgarlas pues constituye un delito         </p>
+        </div>
+
+        <h3>¿Para cuando el curso de PHP/MySQL?</h3>
+        <div class="respuesta">
+            <p>El curso de PHP/MySQL sera el siguiente despues de terminar los de java y javaScript</p>
+        </div>
+
+        <h3>¿Por que no ordenas los videso? no hay forma de encontrar algun video o algo</h3>
+        <div class="respuesta">
+            <p>Los videso se encuentran perfectamente ordenados. puedes acceder a la lista de reproduccion de mi canal 
+                donde podrias acceder a ellos organizados por curso y numero e video </p>
+        </div>
+
+        <h3>Estoy en el video No. 18 del curso de VBA llevo ahi tres meses ¿Porque no publicas mas videos?</h3>
+        <div class="respuesta">
+            <p>El curso de de VBA Excek contiene 546 videos ya terminados desde hace un año. Accede a la lista de 
+                reproduccion de mi canal y podras ver todos los curso y videos organizados por curso y numero de video </p>
+        </div>
+
+        <h3>Hola. Muy buenos los vides, dame una direecion de correo para psarte una BBDD con la que tengo problemas</h3>
+        <div class="respuesta">
+            <p>Gracias por el comentario. Lamnetablemente no tengo tiempo para atender temas informaticos personales. 
+                Tan solo resuelvo dudas relacioadas con el curso
+            </p>
+        </div>
+
+        <h3>Hola. Exceelente tu canala. Tengo una duda: Resulta que tengo una BBDD con 29 tablas con 51 campos cada una 
+            ¿Poque cuando imprimo no me sale la fecha de alta en la empresa de mis empleados?
+        </h3>
+        <div class="respuesta">
+            <p>Gracias por el comentario. Este tipo de dudas resulta un poco complicado resolveralas a distancia.
+                las consultas para el tarot y la bola de cristal las contesto solo el 30 de febrero.
+                Siento no ser de mas ayuda. Un saludo.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
