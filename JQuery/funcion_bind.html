@@ -23,12 +23,34 @@ p{	font-size:1.3em;}
 	border:dotted 5px #0000FF;
 	/*background-color: #FF0000;*/}
 </style>
+jq
+<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 <script>
+	$(document).ready(function(){
+		v_img1=$("#imagen1").attr("src");
+		$("#imagen_grande").hide();
+		$("#imagen1").bind("click", v_img1, abreimagen);
+	});
 
+function abreimagen(e){
+		e.stopPropagation();
+		$("#imagen_grande").fadeIn("slow");
+		$("#img_sustitucion").replaceWith("<img src= ' " + e.data + "' width='700' height='400'>");
+	}
 
-
+	$(document).bind("click keypress", function(){
+		$("#imagen_grande").fadeOut(2500);
+	});
+	
+	$(document).ready(function(){
+		$("button").bind({
+		  click:function(){$("p").slideToggle();},
+		  mouseover:function(){$("body").css("background-color", "#E9E9E4");},  
+		  mouseout:function(){$("body").css("background-color", "#FFFFFF");}  
+		});
+	  });
 </script>
 </head>
 
