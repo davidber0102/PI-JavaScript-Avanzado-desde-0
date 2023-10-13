@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+table{	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;}
+
+img{	padding:0 5px;}
+h1{	text-align:center;}
+</style>
+<script src="Jquery/jquery-3.7.1.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+		var foto_hover=["img/arbol.jpg",
+						"img/atardecer.jpg",
+						"img/sol.jpg"];
+		var imagenes=[];
+		for(var i=0;i<foto_hover.length; i++){
+			imagenes[i]= new Image();
+			imagenes[i].src=foto_hover[i];
+		}
+
+
+		$(".img").each(function() {
+			$(this).hover(cambiar , restaurar);
+        });
+
+	function cambiar(e){
+		if(e.target==img1){
+			$("#img1").attr("src", imagenes[0].src);
+		} else if (e.target==img2){
+			$("#img2").attr("src", imagenes[1].src);
+		} else if (e.target==img3){
+			$("#img3").attr("src", imagenes[2].src);
+		}
+	}
+
+	function restaurar(e){
+		if(e.target==img1){
+			$("#img1").attr("src", "img/img2/arbol.jpg");
+		} else if (e.target==img2){
+			$("#img2").attr("src", "img/img2/atardecer.jpg");
+		} else if (e.target==img3){
+			$("#img3").attr("src", "img/img2/sol.jpg");
+		}
+	}
+});
+
+
+</script>
+</head>
+
+<body>
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="img/img2/arbol.jpg" id="img1" ></td>
+    <td><img src="img/img2/atardecer.jpg" id="img2" ></td>
+    <td><img src="img/img2/sol.jpg" id="img3" ></td>
+
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery</title>
+</head>
+<style>
+    h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #463232;}
+
+    #menu{        width: 70px;
+        background-color: rgb(110, 138,195);
+        padding: 20px 20px 0 20px;
+        position: absolute;
+        left: -91px;
+        z-index: 100;    }
+
+    #menu img{        margin-bottom: 20px;
+        border: 1px solid rgb(0, 0,0);    }
+
+        h2 { text-align: center;}
+        p { margin-left: 150px;}
+</style>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<script src="jquery/jquery.easing.1.3.min.js"></script>
+<script>
+  $(document).ready(function () {
+   $("#menu").hover(function () {
+        $(this).stop().animate({
+            left: "0px"
+        }, 1000, "easeInSine");// termina animate
+    
+        },
+        function () {
+            $(this).stop().animate({
+                left: "-91px"
+            }, 1800, "easeOutBounce");// termina animate 2 renote
+        }
+   ); // termina funcion hover
+  }); // termina funcion ready
+</script>
+<body>
+    <head>
+        <h1>Ejercicio JQuery: Animaciones IV</h1>
+    </head>
+    <h2>Menus Deslizantes</h2>
+    <p>Pasa el raton por encima de la pestaña de la izquierda</p>
+    <div id="menu">
+        <img src="img/arbol.jpg" alt="blue" width="70" height="70">
+        <img src="img/atardecer.jpg" alt="blue" width="70" height="70">
+        <img src="img/auto1.png" alt="green" width="70" height="70">
+        <img src="img/auto2.jpg" alt="orange" width="70" height="70">
+        <img src="img/paisaje.jpg" alt="purple" width="70" height="70">
+        <img src="img/paisaje2.jpg" alt="red" width="70" height="70">
+        <img src="img/sol.jpg" alt="yellow" width="70" height="70">
+    </div>
+
+   
+</body>
+</html>

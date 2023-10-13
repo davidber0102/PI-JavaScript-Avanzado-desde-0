@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Iframe</title>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<style>
+  h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #463232;}
+  #mivinculo{    text-align: center;
+    font-size: 1.3em;
+    color: #463232;
+    margin-left: 550px;  }
+
+  #mivinculo:hover{    font-size: 1.5em;
+    background-color: aqua;  }
+</style>
+<script>
+  $(document).ready(function(){
+    $("#miformulario").hide();
+    $("#mivinculo").click(function(e){
+        $("#miformulario").fadeIn(1000);
+        //e.preventDefault();
+        return false;
+    });
+  });
+</script>
+</head>
+
+<body>
+  <head>
+    <h1>Ejercicio Iframe I</h1>
+  </head>
+<a href="http://www.google.es" id="mivinculo">
+Haz login
+</a>
+<br><br>
+<form name="form1" method="post" action="" id="miformulario">
+  <table width="25%" border="0">
+    <tr>
+      <td>Usuario</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Contraseña</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="submit" name="button" id="button" value="Enviar"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+div{	width: 35%;
+	height: 35%;
+	min-width:200px;
+	min-height:200px;
+	display: block;
+	margin:80px auto 20px auto;}
+
+.happy{	stroke: #3d8;
+	fill: none;
+	stroke-width: 1px;
+	stroke-linecap: round;}
+
+.sad{	stroke: #d66;
+	fill: none;
+	stroke-width: 1px;
+	stroke-linecap: round;}
+
+.neut{	stroke: #ec5;
+	fill: none;
+	stroke-width: 1px;
+	stroke-linecap: round;}
+
+p {	margin: 0 0 90px 0;
+	font: 24px Lato;
+	text-align: center;}
+
+.rerun{	width: 50px;
+	height: 15px;
+	margin: auto;
+	padding: 10px 15px;
+	display: block;
+	position: relative;
+  z-index: 1;
+	font: 12px Lato;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	background: #96c;
+	opacity: 0.5;
+	cursor:pointer;
+	transition: 0.2s ease;}
+
+.rerun:hover{	opacity: 0.8;}
