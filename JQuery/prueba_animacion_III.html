@@ -17,6 +17,7 @@
         width: 300px;
     }
 </style>
+<<<<<<< HEAD
 <script src="jquery/jquery-3.7.1.min.js"></script>
 <script>
   $(document).ready(function () {
@@ -36,6 +37,20 @@
         },2000);
     });// termina funcion click sobre la imagen 
   }); // termina funcion ready
+=======
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+       $("#titulo").hide();
+       $("#foto img").width(60).heigth(40).click(function(){
+            $(this).animate({
+                marginLeft: "150px",
+                width: "300px",
+                heigth: "400px",
+            });
+       });
+    });
+>>>>>>> 5be5bcf55c9f5c602e8f2b54cad40f118e43f62f
 </script>
 <body>
     <head>
@@ -44,7 +59,11 @@
    
 
     <div id="foto">
+<<<<<<< HEAD
         <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen1">
+=======
+        <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen">
+>>>>>>> 5be5bcf55c9f5c602e8f2b54cad40f118e43f62f
         <p id="titulo">Arbol</p>
     </div>
 </body>
