@@ -23,14 +23,14 @@
         var contador =0;
     
     while(persona!="salir"){
-        persona=prompto("Introduce trabajador");
+        persona=prompt("Introduce trabajador");
         trabajadores[contador]=persona;
         contador++;
     }
     trabajadores.pop();
 
     for(var i=0;i<trabajadores.length;i++){
-        document.write(trabajadores[i] + "<br*>");
+        document.write(trabajadores[i] + "<br>");
     }
     </script>
 </body>

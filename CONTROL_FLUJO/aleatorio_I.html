@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,8 @@
             font-weight: bold;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;        }
-    </style>   
+    </style>
+
 </head>
 
 <body>
@@ -25,25 +26,24 @@
                 <input type="text" name="texfield2" id="c_intentos"> </td>
         </tr>
     </table>
-
-<script>
+    <script>
         var aleatorio=Math.round(Math.random()*100);
         var minum, intentos;
         minum=0;
         intentos=0;
-
+    
         var mensaje=document.getElementById("c_mensaje");
         var intentos_consumidos=document.getElementById("c_intentos");
     
     do{
         minum=prompt("Introduce un Numero entre 0 y 100");
-
+    
             if(aleatorio>minum){
                 mensaje.value="Mas alto";
                 mensaje.style.fontSize="18px";
                // document.write("Mas alto"+"<br/>");           
             }
-
+    
             if(aleatorio<minum){
                 mensaje.value="Mas bajo";
                 mensaje.style.fontSize="18px";
@@ -59,7 +59,6 @@
     mensaje.style.fontSize="20px";
     mensaje.style.color="red";
     //document.write("Correcto. Has consumido " + intentos + "intentos");
-</script>
-
+    </script>
 </body>
 </html>
