@@ -38,8 +38,7 @@ var restar=false;
 
   function display_numeros(numero){
     document.getElementById("display").value=cifra+numero;
-    cifra=document.getElementById("display").value;
-  }
+    cifra=document.getElementById("display").value;  }
 
   function suma(){
     if(restar){
@@ -47,8 +46,7 @@ var restar=false;
       document.getElementById("display").value=acumulado;
     }else{
     acumulado=acumulado+parseInt(cifra);
-    document.getElementById("display").value=acumulado;
-    }
+    document.getElementById("display").value=acumulado;    }
     cifra="";
     sumar=true;
     restar=false;
@@ -68,11 +66,9 @@ var restar=false;
       acumulado=parseInt(cifra);
       p_operacion=false;
     }
-
     cifra="";
     sumar=false;
-    restar=true;
-  }
+    restar=true;  }
 
   function resultado(){
     if(sumar){
@@ -81,11 +77,8 @@ var restar=false;
       document.getElementById("display").value=acumulado - parseInt(cifra);
     }
     acumulado=parseInt(document.getElementById("display").value);
-    cifra=0;
-  }
+    cifra=0;  }
 </script>
-
-
 </head>
 <body>
   <head>

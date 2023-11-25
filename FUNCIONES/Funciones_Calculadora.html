@@ -22,14 +22,14 @@
             function division(num1,num2) {alert("La division es: " + (num1 / num2));}
     
      do{
-            var operacion=prompt("¿Que operacion deseas realizar?");
+            var operacion=prompt("¿Que operacion deseas realizar?----(sumar/restar/multiplicar/dividir)");
             var operador1=parseInt(prompt("Introduce el primer Numero: "));
             var operador2=parseInt(prompt("Introduce el siguiente Numero: "));
 
             if(operacion=="sumar"){
                 suma(operador1,operador2);
             }else if(operacion=="restar"){
-                restar(operador1,operador2);
+                resta(operador1,operador2);
             }else if(operacion=="multiplicar"){
                 multiplicacion(operador1,operador2);
             }else if(operacion=="dividir"){
@@ -38,7 +38,7 @@
                 alert("Operacion no contemplada");
             }
             reoetir=prompt("¿Deseas Repetir?");
-        }while(reoetir=="si");
+        }while(repetir=="si");
 
 
 
