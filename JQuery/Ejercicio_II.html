@@ -9,21 +9,29 @@
             text-align: center;
             font-weight: bold;
             border: 3px solid black;    }
-        .micontenedor{
-            background-color: brown;
-        }
+
+        .micontenedor{            background-color: rgba(198, 96, 96, .7);
+            color: antiquewhite;        }
+        h2{font-size: 1.7em; color: aqua;}
+        p{font-size: 1.5em; color: blue;}
+        form{border: 5px solid red; align-items: center;}
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="jquery/jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function(){
             //alert($("#errores h2").html());
-            $("#errores").append("<p> Hay errorres en el formulario </p>");
+            $("#errores1").html("<p> Hay errorres en el formulario </p>");
+            $("#errores2").append("<p> Hay errorres en el formulario </p>");
+            $("#errores3").prepend("<p> Hay errorres en el formulario </p>");
+            $("#errores4").before("<p> Hay errorres en el formulario </p>");
+            $("#errores5").after("<p> Hay errorres en el formulario </p>");
+            $("#errores6 h2").text("Hay errorres en el formulario ");
 
         });
         function validar(){
-            var n_usuarios=document.getElementById("usuarios").value;
-            if (n_usuarios==""){
-                $("#usuarios").after("Rellena este campo, por favor");
+            var n_usuario=document.getElementById("usuario").value;
+            if (n_usuario==""){
+                $("#usuario").after("Rellena este campo, por favor");
             }
         }
     </script>
@@ -33,7 +41,37 @@
         <h1>Ejercicio Agregando Conternido: JQuery</h1>
     </head>
     <div id="contenedor">
-        <div id="errores" class="micontenedor">
+        <div id="errores1" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="errores2" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="errores3" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="errores4" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="errores5" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="errores6" class="micontenedor">
             <h2>Errores</h2>
         </div>
     </div>
