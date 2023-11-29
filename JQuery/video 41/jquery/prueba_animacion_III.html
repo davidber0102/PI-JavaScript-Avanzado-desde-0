@@ -10,7 +10,7 @@
     #titulo{margin-left: 150px;}
     #foto p{
         background-color: black;
-        color: rgb(255, 255, 255);
+        color: aliceblue;
         font-size: 24px;
         text-align: center;
         font-weight: bold;
@@ -35,18 +35,7 @@
             height:"40px"
         },2000);
     });// termina funcion click sobre la imagen 
-  }); // termina funcion ready=======
-
-    $(document).ready(function(){
-       $("#titulo").hide();
-       $("#foto img").width(60).heigth(40).click(function(){
-            $(this).animate({
-                marginLeft: "150px",
-                width: "300px",
-                heigth: "400px",
-            });
-       });
-    });
+  }); // termina funcion ready
 </script>
 <body>
     <head>
@@ -55,9 +44,7 @@
    
 
     <div id="foto">
-
         <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen1">
-        <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen">
         <p id="titulo">Arbol</p>
     </div>
 </body>
