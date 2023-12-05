@@ -7,8 +7,7 @@
 </head>
 <style>
     h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #463232;}
-    #menu{
-        position: absolute;
+    #menu{        position: absolute;
         left: -210px;
         top: 80px;
         width: 213px;
@@ -16,8 +15,7 @@
         background-color: #ff9;
         padding: 15px;    }
 
-    #boton{
-        position: absolute;
+    #boton{        position: absolute;
         left: 225px;
         top: 10px;
         width: 23px;
@@ -25,31 +23,21 @@
         z-index: 1;
         cursor: pointer;    }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-
-
+<script src="jquery/jquery-3.7.1.js"></script>
 <script>
     $(document).ready(function(){
         $("#boton").bind({
-            click:function(){$("#menu").animate({left:"0px"},1000)}, 
-            dblclick:function(){$("#menu").animate({left:"-210px"})}
-        });
+            click:function(){$("#menu").animate({left:"0px"},1000)},
+            dblclick:function(){$("#menu").animate({left:"-210px"})}        });
 
-
-         /*
-        $("#boton").click(function(){
+      /*        $("#boton").click(function(){
             $("#menu").animate({left:"0", height: 'toggle'}, "slow", function(){$("#menu").animate({left:"-210px", height: 'toggle'});} );
         });
 
-
         $("#boton").on("click", function(){ $("#menu").animate({left:"0px"}, 1000, function(){ $("#menu").animate({left:"-210px"}, 18000);},
-                            );
-                        });*/
+                            );                        });*/
     });
-
 </script>
-
-
 <body>
     <head>
         <h1>Ejercicio JQuery: Animaciones II</h1>
@@ -94,7 +82,6 @@
             Cras hendrerit semper velit vestibulum aliquet. Nunc laoreet porttitor porttitor. 
         </p>
     </div>
-
     <div id="menu">
         <div id="boton"> X </div>
         <p> Menu:</p>
@@ -102,8 +89,6 @@
         <p> Opcion B</p>
         <p> Opcion C</p>
         <p> Opcion D</p>
-
     </div>
-  
 </body>
 </html>

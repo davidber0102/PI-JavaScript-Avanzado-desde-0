@@ -8,8 +8,8 @@
         h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #c7b4b4;}
         h2{text-align: center;}
         body{background-color: #334873; color: #fff}
-        #principal{width: 60%; color: #fff;}
-        a{color: #fff; font: bold 20px Verdana, Geneva, sans-serif;}
+        #principal{width: 60%; color: #fff; margin: 0 auto;}
+        a{color: #fff; font: bold 20px Verdana, Geneva, sans-serif; }
     </style>
     <script src="jquery/jquery-3.7.1.js"></script>
     <script>
@@ -19,17 +19,12 @@
             });
             $("a").mouseover(function(){
                 var mensajes = "<p> Estas pasando el mouse por encima del link </p>";
-                $("#principal").append(mensajes);
-            });
+                $("#principal").append(mensajes);            });
             $("#el_boton").click(function(){
-                $(this).val('Boton modificado');
-            });
+                $(this).val('Boton modificado');            });
             $("#el_campo").focus(function(){
-                $(this).val('TIENES QUE ESCRIBIR AQUI');
-            });
+                $(this).val('TIENES QUE ESCRIBIR AQUI');            });
         });
-
-
     </script>
 </head>
 <body>
@@ -37,18 +32,15 @@
         <h1>Ejercicio JQuery: Leyendo y Modificando atributos HTML III</h1>
     </head>
     <div id="principal">
-    <h2>Introduccion a eventos</h2>
-    <p><a href="#">Un Link</a></p>
-    <form action="#" method="get">
-        <fieldset>
-            <legend>Formulario</legend>
-            <p> <input type="button" value="Un boton" name="button" id="el_boton"></p>
-            <p> <input type="text" name="tetxtfield" id="el_campo"></p>
-        </fieldset>
-    </form>
-</div>
-
-
-    
+      <h2>Introduccion a eventos</h2>
+        <p><a href="#">Un Link</a></p>
+       <form action="#" method="get">
+           <fieldset>
+              <legend>Formulario</legend>
+              <p> <input type="button" value="Un boton" name="button" id="el_boton"></p>
+              <p> <input type="text" name="tetxtfield" id="el_campo"></p>
+           </fieldset>
+       </form>
+   </div>
 </body>
 </html>

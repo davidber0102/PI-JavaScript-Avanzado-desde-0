@@ -7,37 +7,30 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            .linkdestacacursos{
-               /* background-color: brown;*/
+            .linkdestacacursos{               /* background-color: brown;*/
                color: brown;
                font-weight: bolder;
                margin-left: 35px;
                font: 1.5em;}
-            a{
-                display: block;
+
+            a{                display: block;
                 margin-bottom: 20px;
-                font-size: 24px;
-            }
+                font-size: 24px;            }
 
-            table{
-                text-align: center;
-                border: none;
-            }
-            td{
-                border: none;}
+            table{                text-align: center;
+                border: none;            }
 
-            #contieneEnlaces{
-                position: absolute;
+            td{                border: none;}
+
+            #contieneEnlaces{                position: absolute;
                 left: 31px;
                 top: 65px;
                 width: 400px;
                 height: 649px;
                 z-index: 1;
-                padding-top: 100px;
-            }
+                padding-top: 100px;            }
         </style>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-
+        <script src="jquery/jquery-3.7.1.js"></script>
         <script>
             $(document).ready(function (){
                // $("a[href^='http://']").addClass("linkdestacacursos");
@@ -56,35 +49,22 @@
                /* $(".cursos").removeClass("linkdestacacacursos");
                 $(".informacion").addClass("linkdestacacursos");*/
             }
-
         </script>
     </head>
-    <body>
+<body>
     <div id="contieneEnlaces">
-        <a href="https://www.pildorasinformaticas.es/" target="_blank" class="cursos">Pildoras Informaticas</a>
-        <br>
-        <a href="https://www.google.com/" target="_blank" class="informacion">Google</a>
-        <br>
-        <a href="https://www.youtube.com/" target="_blank" class="cursos">Pildoras Informaticas YouTube </a>
-        <br>
-        <a href="remover_remplzar.html" target="_blank" class="ejemplos">Remover y Remplazar</a>
-        <br>
-        <a href="https://news.google.com" target="_blank" class="informacion">Noticias Google</a>
-        <br>
-        <a href="FUNCIONES/Funciones_Calculadora.html" target="_blank" class="ejemplos">Calculadora</a>
-    </div>
+        <a href="https://www.pildorasinformaticas.es/" target="_blank" class="cursos">Pildoras Informaticas</a>        <br>
+        <a href="https://www.google.com/" target="_blank" class="informacion">Google</a>        <br>
+        <a href="https://www.youtube.com/" target="_blank" class="cursos">Pildoras Informaticas YouTube </a>        <br>
+        <a href="remover_remplzar.html" target="_blank" class="ejemplos">Remover y Remplazar</a>        <br>
+        <a href="https://news.google.com" target="_blank" class="informacion">Noticias Google</a>        <br>
+        <a href="FUNCIONES/Funciones_Calculadora.html" target="_blank" class="ejemplos">Calculadora</a>    </div>
 
     <table width:"100%" border="1">
         <tr>
-            <td>Cursos Destacados &nbsp; &nbsp; <input type="checkbox" value="Cursos" id="cursos"></td>
-          
+            <td>Cursos Destacados &nbsp; &nbsp; <input type="checkbox" value="Cursos" id="cursos"></td>          
             <td>Informacion Adicional &nbsp; &nbsp; <input type="checkbox" value="informacion" id="informacion"></td>
         </tr>
-
-
     </table>
-
-        
-     
-    </body>
+</body>
 </html>

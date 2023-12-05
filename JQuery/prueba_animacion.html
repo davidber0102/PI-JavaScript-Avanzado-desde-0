@@ -10,25 +10,16 @@
     img {border-bottom: 3px solid #a12b2b;}
     #imagen2{opacity: 0.5;}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="jquery/jquery-3.7.1.js"></script>
 <script>
     $(document).ready(function(){
        $("#imagen").click(function(){ $(this).animate({marginLeft:"+=150px"}, 500);});  
        $("#imagen2").mouseover(function(){ $(this).animate({opacity:1}, 700);}); 
-       $("#imagen2").mouseout(function(){ $(this).animate({opacity:0.5}, 700);}); 
-    });
-
+       $("#imagen2").mouseout(function(){ $(this).animate({opacity:0.5}, 700);});     });
 </script>
 <body>
-    <head>
-        <h1>Ejercicio JQuery: Animaciones I</h1>
-    </head>
-    <div>
-        <img src="img/auto1.png" alt="" width="300" height="200" id="imagen">
-    </div>
-
-    <div>
-        <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen2">
-    </div>
+    <head>        <h1>Ejercicio JQuery: Animaciones I</h1>    </head>
+    <div>        <img src="img/auto1.png" alt="" width="300" height="200" id="imagen">    </div>
+    <div>        <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen2">    </div>
 </body>
 </html>

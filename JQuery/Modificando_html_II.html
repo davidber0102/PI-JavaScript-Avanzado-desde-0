@@ -9,15 +9,14 @@
         table{text-align: center;width: 50%; border: none; margin: auto;}
         img{padding: 0 5px;}
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="jquery/jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function(){
             var elementos=document.querySelectorAll("img");
-            
+
             for (var i=0;i<elementos.length;i++) {
                 elementos[i].addEventListener("mouseover", cambiar, false);
-                elementos[i].addEventListener("mouseout", restaurar, false);
-            }
+                elementos[i].addEventListener("mouseout", restaurar, false);            }
         });
 
         function cambiar(e){
@@ -26,8 +25,7 @@
             }else if (e.target==img2){
             $("#img2").attr("src", "img/atardecer.jpg");
             }else if (e.target==img3){
-            $("#img3").attr("src", "img/sol.jpg");
-                }
+            $("#img3").attr("src", "img/sol.jpg");                }
      }
     function restaurar(e){
         if (e.target==img1){    
@@ -35,11 +33,8 @@
             }else if (e.target==img2){
             $("#img2").attr("src", "img/img2/atardecer.jpg");
             }else if (e.target==img3){
-            $("#img3").attr("src", "img/img2/sol.jpg");
-                }
-     }
-
-
+            $("#img3").attr("src", "img/img2/sol.jpg");                }
+            }
     </script>
 </head>
 <body>

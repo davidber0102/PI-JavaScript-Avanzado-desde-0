@@ -15,7 +15,7 @@
 	table{		width:100%;
 		margin-top:10px;	}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="jquery/jquery-3.7.1.js"></script>
 <script>
 	$(document).ready(function(){
 		/*document.getElementById("aumenta1").addEventListener("click", aumentar, false);
@@ -32,7 +32,6 @@
 			botones[i].addEventListener("click", aumentar, false);
 			botones[i].addEventListener("click", disminuye, false);
 		}
-
 	});
 
 	function aumentar(e){
@@ -45,14 +44,13 @@
 		}else if (e.target==aumenta3) {
 			zonaActuacion = "#noticia3";
 		}
-
 		var tamDefecto=$(zonaActuacion).css("font-size");
 		tamDefecto=parseInt(tamDefecto);
 		$(zonaActuacion).css("font-size", tamDefecto*1.1);
 		}
+
 	function disminuye(e){
 		var zonaActuacion;
-
 		if(e.target==disminuye1){
 			zonaActuacion = "#noticia1";
 		}else if (e.target==disminuye2) {
@@ -64,9 +62,6 @@
 		tamDefecto=parseInt(tamDefecto);
 		$(zonaActuacion).css("font-size", tamDefecto*0.95);
 	}
-
-
-
 </script>
 </head>
 
@@ -110,6 +105,5 @@
 		dolorem eum fugiat quo voluptas nulla pariatur?"
 		<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta3"></td>
 			<td style="text-align:right"><input type="button" value="Disminuir" id="disminuye3"></td></tr></table></div>
-
 </body>
 </html>

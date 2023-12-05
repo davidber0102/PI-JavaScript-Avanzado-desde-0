@@ -20,41 +20,30 @@ img{	padding:20px 30px; width: 18%;}
 	padding: 25px;
 	border: dotted 2px #00F;}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="jquery/jquery-3.7.1.js"></script>
 <script>
 	$(document).ready(function(){
 		$("#mensaje_img1").hide();
+		//$("#imagen1").hover(mensaje_on, mensaje_off);
 		$("#imagen1").hover(function(){$("#mensaje_img1").show();}, function(){$("#mensaje_img1").hide();});
 	});
-
-	/*
-	function mensahe_on(){
-		$("#mensaje_img1").show();
-	}
+	/*	function mensaje_on(){
+		$("#mensaje_img1").show();	}
 
 	function mensaje_off(){
-		$("#mensaje_img1").hide();
-
-	}*/
-
-
+		$("#mensaje_img1").hide();	}*/
 </script>
 </head>
-
 <body>
 	<head>
         <h1>Ejercicio JQuery: Leyendo y Modificando atributos HTML III</h1>
     </head>
 	<div id="mensaje_img1">Preciosa encina en mitad de la meseta castellana......</div>
 		<div id="imagenes">
-
-		<img src="img/arbol.jpg" id="imagen1">
-		<img src="img/atardecer.jpg" id="imagen2">
-		<img src="img/sol.jpg" id="imagen3">
-		<img src="img/atardecer.jpg" id="imagen4">
-
-
-
+		   <img src="img/arbol.jpg" id="imagen1">
+		   <img src="img/atardecer.jpg" id="imagen2">
+		   <img src="img/sol.jpg" id="imagen3">
+		   <img src="img/atardecer.jpg" id="imagen4">
 		</div>
 </body>
 </html>
