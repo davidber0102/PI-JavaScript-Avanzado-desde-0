@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery</title>
+</head>
+<style>
+    h1 {font-size: 36px;font-weight: bold; text-align: center; border-bottom: 3px solid #463232;}
+    #titulo{margin-left: 150px;}
+    #foto p{
+        background-color: black;
+        color: aliceblue;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        width: 300px;
+    }
+</style>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#titulo").hide();
+    $("#foto img").width(60).height(40).click(function(){ 
+        $(this).animate({
+            marginLeft:"150px",
+            width:"300px",
+            height:"200px"
+        },2000,  function(){
+                $("#titulo").fadeIn(1000).delay(1000).fadeOut(1000);
+         }).delay(3000); // termina funcion animate
+         $(this).animate({
+            marginLeft:"0px",
+            width:"60px",
+            height:"40px"
+        },2000);
+    });// termina funcion click sobre la imagen 
+  }); // termina funcion ready
+</script>
+<body>
+    <head>
+        <h1>Ejercicio JQuery: Animaciones III</h1>
+    </head>
+   
+
+    <div id="foto">
+        <img src="img/arbol.jpg" alt="" width="300" height="200" id="imagen1">
+        <p id="titulo">Arbol</p>
+    </div>
+</body>
+</html>
