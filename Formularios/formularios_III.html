@@ -19,7 +19,7 @@ width: 25%;}
 .las_aficiones{ border: 5px solid #F93;
 width: 300px;
 height: 150px;
- }
+}
 </style>
 <script src="jquery/jquery-3.7.1.js"></script>
 <script>
@@ -54,6 +54,10 @@ height: 150px;
       //alert("Posicion" + i + " " + miArray[i]);
       $("#las_aficiones").append("Posicion: " + i + " " +miArray[i]+"<br/>");
       i++
+    });
+
+    $("#pais").change(function(){
+      alert("Pais de Residencia: " + " " + $(this).val());  
     });
 	});
 </script>
@@ -107,7 +111,6 @@ height: 150px;
   </table>
 </form>
 </div>
-
 <div class="las_aficiones" id="las_aficiones"></div>
 </body>
 </html>
