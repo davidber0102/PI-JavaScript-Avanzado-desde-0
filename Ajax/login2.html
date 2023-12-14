@@ -28,14 +28,17 @@ $(document).ready(function() {
 		/*var datosFormulario={usuario:$("#usuario").val(),
 		                     contra:$("#contra").val()}	*/							 
 		var datosFormulario=$(this).serialize();							 
-		$.get("login.php", datosFormulario, procesarDatos);		
+		$.getJSON("login2.php", datosFormulario, procesarDatos);		
 		return false;
 	});
 	
-	function procesarDatos(datos_devueltos){		
-				
-				
-	}	
+	function procesarDatos(datos_devueltos){	
+		//$("#contenidos_externos").html("<p>" + datos_devueltos.Edad + "</p>");					
+		var informacion="<p> Nombre: " + datos_devueltos.Nombre + "</p>";
+		informacion+="<p> Apellido: " + datos_devueltos.Apellido + "</p>";
+		informacion+="<p> Edad: " + datos_devueltos.Edad + "</p>";
+		$("#contenidos_externos").html(informacion);
+		}	
 }); 
 </script>
 </head>
@@ -61,7 +64,7 @@ $(document).ready(function() {
                 </tr>
             </table>
 			</form>
-			<div id="contenidos_externos"></div>
+			<div id="contenidos_externos">In</div>
 		</div>
 	</div>
 </body>
