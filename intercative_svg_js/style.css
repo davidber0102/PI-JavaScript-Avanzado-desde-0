@@ -6,7 +6,11 @@ body {  background: rgb(123, 225, 248);
 
 #canada-map {   fill: hsl(120, 55%, 62%);}
 
-#canada-map g { transition: .1s; -webkit-transition: .1s; -moz-transition: .1s; -ms-transition: .1s; -o-transition: .1s; }
+#canada-map g { transition: .1s; 
+  -webkit-transition: .1s; 
+  -moz-transition: .1s; 
+  -ms-transition: .1s; 
+  -o-transition: .1s; }
 
 #canada-map g:hover {   fill: hsl(120, 75%, 27%);
   cursor: pointer;}
@@ -22,19 +26,6 @@ body {  background: rgb(123, 225, 248);
   opacity: 0;
   transition: 1s; }
 
-@media all and (max-width: 800px) {
-  #provinceInfo { width: 40%; } }
-
-@media all and (max-width: 750px) {
-  #provinceInfo { 
-    width: 100%; 
-    position: static; 
-    background: none;  }
-
-#provinceInfo.show p { 
-    color: #d53030 !important; 
-  margin-bottom: 2rem;   }
-}
 #provinceInfo.show { opacity: 1; }
 
 #provinceInfo h1 {
@@ -50,3 +41,17 @@ body {  background: rgb(123, 225, 248);
 
 #provinceInfo img {
   width: 100%;}
+
+  @media all and (max-width: 800px) {
+    #provinceInfo { width: 40%; } }
+  
+  @media all and (max-width: 750px) {
+    #provinceInfo { 
+      width: 100%; 
+      position: static; 
+      background: none;  }
+  
+  #provinceInfo.show p { 
+      color: #d53030 !important; 
+    margin-bottom: 2rem;   }
+  }
