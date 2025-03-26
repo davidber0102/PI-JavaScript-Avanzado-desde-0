@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion Formulario</title>
+    <style>
+        html, body{            background-color: #036;        }
+        .contenido{            max-width: 760px;
+            margin: 30px 0 0 100px;        }
+        .cont_princiapal{            margin: auto;
+            width: 50%;        }
+        .logo{            letter-spacing: -1px;
+            color: #fc6;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, .25);
+            font: normal 54px 'Times New Roman', Arial, Helvetica, sans-serif;        }
+        .principal{        border-bottom: solid 2px rgba(255, 255, 250, .5);    }
+        .principal h1{        font-size: 30px;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+            border-bottom: solid 2px rgba(255, 255, 250, .5);    }
+         p, li, legend, form{        font-size: 18px;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 125%;
+            margin-bottom: 10px;    }
+        input{font-size: 20px;}
+        form .wide{ font-size: 18px;
+            width: 100%;}
+        form#order div, form#form_registro div{
+            padding-bottom: 10px;    }
+        form#order .label, form#form_registro .label{         display: block;
+            float: left;
+            clear: left;
+            width: 175px;
+            text-align: right;
+            padding: 7px 15px 0 0;
+            text-transform: uppercase;
+            font-weight: bold;    }
+
+        form#form_registro .label{width: 200px;}
+        form#order select, form#form_registro select{
+            display: inline-block;
+            margin-top: 8px;        }
+        form#order input[type="radio"], form#form_registro input[type="radio"], form#form_registro input[type="checkbox"]{
+            display: inline-block;
+            margin-top: 10px;    }
+        form .indent, #submit{            margin-left: 215px;    }
+        #form_registro .indent label.err{margin-left: 0;}  
+           #form_registro label.error{
+            font-size: 0.8em;
+            color: #f00;
+            font-weight: bold; 
+            display: block;
+            margin-left: 250px;
+           }
+    </style>
+<script src="jquery/jquery-3.7.1.js"></script>
+<script src="jquery/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(document).ready(function() {
+    $("#form_registro").validate({
+      rules:{
+        rules:{
+            e_mail:{
+                required: true,
+                email:true,            },
+            password:{
+                required: true,
+                rangelength: [8,16]            },
+            confirma:{
+                required: true,
+                rangelength: [8,16],
+                equalTo: "#password",           },
+        }
+      },// se cierra las rules
+      messages:{
+        e_mail:{
+                required: "Introduce email, por favor",
+                email:"Escribe el formato correcto",            },
+        password:{
+                required: "Introduce contraseña, por favor",
+                rangelength: "La contraseña debe contener entre 8 y 16 caracteres"  ,         },
+        confirma:{
+                required: "Introduce contraseña, por favor",
+                rangelength: "La contraseña debe contener entre 8 y 16 caracteres"  ,   
+                equalTo: "Debe coincidir con el campo anterior "      },
+       
+      },// se cierra mensajes
+    errorPlacement: function(error, element){
+        if (element.is(":radio") || element.is(":checkbox")) {
+            error.appendTo(element.parent());
+            
+        }else{
+            error.insertAfter(element);
+        }
+    }
+
+    });// cierre de la funcion validate
+	});//cierre de la funcion ready
+    });
+
+    // video 67 minuto 14
+</script>
+</head>
+<body>
+    <div class="cont_princiapl">
+        <div class="cabecera">
+            <p class="logo">Pildoras Informaticas</p>
+        </div>
+        <div class="contenido">
+            <div class="principal">
+                <h1>Rellenar</h1>
+                    <form action="" class="form_registro" name="form_registro" id="form_registro">
+                        <div>
+                            <label for="nombre" class="label">NOMBRE</label>
+                            <input type="text" name="nombre" id="nombre" class="required" title="Por favor, rellena el nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="label">E-mail</label>
+                            <input type="text" name="e_mail" id="e_mail">
+                        </div>
+                        <div>
+                            <label for="password" class="label">Contraseña</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div>
+                            <label for="confirma" class="label">Confirma Contraseña</label>
+                            <input type="password" name="confirma" id="confirma">
+                        </div>
+                        <div><span class="label">Pasatiempos:</span>
+                            <input type="checkbox" name="hobby" id="comer" value="comer">
+                                Comer
+                            <input type="checkbox" name="hobby" id="Beber" value="Beber">
+                            <label for="Beber">Beber</label>
+                            <input type="checkbox" name="hobby" id="Dormir" value="Dormir">
+                            <label for="Dormir">Dormir</label>
+                        </div>
+                        <div>
+                            <label for="fecha" class="label">Fecha Nacimiento</label>
+                            <input type="text" name="fecha" id="fecha" class="date" title="Utiliza el formato MM/DD/AAAA">
+                        </div>
+                        <div>
+                            <label for="planeta" class="label">Planeta</label>
+                            <select name="planeta" id="planea" class="required" title="Elige planeta de Nacimiento">
+                                <option value=""">---Por favor, selecciona---</option>
+                                <option value="tierra">Tierra</option>
+                                <option value="marte">Marte</option>
+                                <option value="ganimedes">Ganimedes</option>
+                                <option value="no me suena nada">No me suena nada</option>
+                            </select>
+                        </div>
+                        <label for="comentarios" class="label">Comentarios</label>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                        <div class="labelBlock">¿Deseas recibir correo basura de nuestra parte?</div>
+                        <div class="indent">
+                            <input type="radio" name="spam" id="yes" value="Yes">
+                            <label for="si">Si</label>
+                            <input type="radio" name="spam" id="por_supiesto" value="Por_supuesto">
+                            <label for="definitely">Por Supuesto</label>
+                            <input type="radio" name="spam" id="eleccion" value="eleccion">
+                            <label for="eleccion">¿Tengo Eleccion?</label>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="Enviar" id="submit">
+                        </div>                    
+                    </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
